@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap");
+body {
+  display: block;
+  max-width: 80vw;
+  background-color: #fcfbfa;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 65px;
+  font-family: "inter", sans-serif;
+  line-height: 1;
+}
+
+body #home-button {
+  -webkit-animation: animated-text-reverse 0.2s linear 1.5s both;
+          animation: animated-text-reverse 0.2s linear 1.5s both;
+  margin: 30px 30px;
+  font-size: 0.5em;
+  width: 23px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: black;
+}
+
+body #home-button a:visited {
+  color: black;
+}
+
+body #home-button:hover {
+  -webkit-animation: animated-text 0.3s linear 1 both;
+          animation: animated-text 0.3s linear 1 both;
+}
+
+body .wrap {
+  margin: 150px auto;
+  width: 100%;
+  padding: 0 2.5vh;
+}
+
+@-webkit-keyframes animated-text {
+  from {
+    width: 23px;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+@keyframes animated-text {
+  from {
+    width: 23px;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+@-webkit-keyframes animated-text-reverse {
+  from {
+    width: 120px;
+  }
+  to {
+    width: 23px;
+  }
+}
+
+@keyframes animated-text-reverse {
+  from {
+    width: 120px;
+  }
+  to {
+    width: 23px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    background-color: #fcfbfa;
+    max-width: 80vw;
+    font-size: 35px;
+  }
+  body #home-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 0.5em;
+    margin: 27px 27px;
+    width: auto;
+  }
+  body .wrap {
+    margin-top: 100px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    background-color: #fcfbfa;
+    max-width: 80vw;
+    font-size: 25px;
+  }
+  body #home-button {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    font-size: 0.5em;
+    margin: 25px 25px;
+    width: auto;
+  }
+  body .wrap {
+    margin-top: 100px;
+  }
+}
+/*# sourceMappingURL=about.css.map */

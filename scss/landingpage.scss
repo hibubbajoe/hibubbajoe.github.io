@@ -1,0 +1,212 @@
+//this is for the about page: font-family: 'Inter', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
+$hardorange: #ff4d0a;
+$beigeorange:#f09a66;
+$pukegreen: #9b980f;
+$sweetblue: #48beec;
+$hardblue: #00205d;
+$superlightpink: #fee6da;
+
+@mixin link_colors ($link, $visit, $hover) {
+    a {
+        color: $link;
+        text-decoration: none;
+
+        &:visited {
+            color: $visit;
+        }
+
+        &:hover {
+            color: $hover;
+        }
+
+    }
+}
+
+@mixin center_self {
+    align-self: center;
+    justify-self: center;
+}
+
+* {
+    font-family: 'Inter', sans-serif;
+}
+
+a:hover {
+    cursor: pointer;
+}
+
+body {
+
+    background-color: $beigeorange;
+    text-transform: uppercase;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas: ". . . . ."
+        ". logo logo logo ."
+        "footer nav-magic nav-magic nav-magic .";
+
+
+    #logo-container {
+        grid-area: logo;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-items: center;
+
+        #my-name {
+            font-size: 100px;
+            margin: 10px;
+        }
+
+        p {
+            font-size: 20px;
+        }
+
+        #fullstack {
+            font-size: 40px;
+            margin: 10px;
+        }
+    }
+
+
+
+    #nav-list {
+        list-style: none;
+        font-size: 30px;
+        font-weight: bolder;
+        grid-area: nav-magic;
+        display: grid;
+        @include link_colors(black, black, black);
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-template-areas: "portfolio left-break about right-break contact"
+            "portfolio left-break about right-break contact"
+            ". . press-me . . ";
+
+
+        #portfolio {
+            grid-area: portfolio;
+            @include center_self;
+        }
+
+        #left-break {
+            grid-area: left-break;
+            @include center_self;
+        }
+
+        #about {
+            grid-area: about;
+            @include center_self;
+        }
+
+        #right-break {
+            grid-area: right-break;
+            @include center_self;
+        }
+
+        #contact {
+            grid-area: contact;
+            @include center_self;
+        }
+
+        #press-me {
+            padding: 10px;
+            grid-area: press-me;
+            @include center_self;
+            margin-bottom: 30px;
+
+            button {
+                border: none;
+                background-color: transparent;
+                font-size: 20px;
+            }
+
+            &:hover {
+                animation: textPulse 1.5s infinite;
+            }
+        }
+    }
+
+
+    .footer {
+        font-size: 12px;
+        margin: 7px;
+        grid-area: footer;
+        align-self: end;
+    }
+
+    .hidden {
+        display: none;
+    }
+}
+
+.overlay {
+    animation-name: fadeIn;
+    animation-duration: 0.7s;
+    width: 100vw;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    cursor: crosshair;
+
+
+    //all content within the overlay
+    .overlay-content {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        @include link_colors(white, white, $pukegreen);
+        text-shadow: black 0px 0px 3px;
+
+        //links within the overlay
+        a {
+            outline: 0;
+            padding: 10px;
+            text-decoration: none;
+            font-size: 100px;
+            font-weight: bolder;
+            display: block;
+            //makes the hover a little smoother
+            transition: 0.5s;
+            cursor: crosshair;
+        }
+    }
+}
+
+
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+
+    to {
+        opacity: 0;
+    }
+}
+
+// When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap 
+@media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 20px
+    }
+}
