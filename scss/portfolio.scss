@@ -15,6 +15,10 @@ $superlightpink: #fee6da;
 
 }
 
+li {
+    list-style-type: none;
+}
+
 img {
     width: 100%;
 }
@@ -23,13 +27,11 @@ body {
 
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
-        "home . ."
-        ". carousel carousel"
-        ". carousel carousel"
-        ". . .";
-
+        "home project-number project-number"
+        "project-name carousel carousel"
+        "project-name carousel carousel";
 
     background-color: $superlightpink;
     text-transform: uppercase;
@@ -57,19 +59,45 @@ body {
         }
     }
 
+    .project-number {
+        grid-area: project-number;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        align-self: flex-end;
+
+
+        #project {
+            grid-column: 1;
+        }
+
+        #project-number {
+            grid-column: 2;
+            justify-self: flex-end;
+        }
+    }
+
+    .project-names {
+        grid-area: project-name;
+        display: flex;
+
+        align-items: center;
+        line-height: 1.5;
+        margin: auto;
+    }
 
     .carousel-container {
 
+        border: 2px solid black;
         grid-area: carousel;
         //display: flex;
         width: 60vw;
         margin: auto;
-        border: 2px solid black;
         overflow: hidden;
     }
 
     .carousel-slide {
         display: flex;
+
     }
 
     button {

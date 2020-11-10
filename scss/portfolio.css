@@ -5,6 +5,10 @@
   font-family: "inter", sans-serif;
 }
 
+li {
+  list-style-type: none;
+}
+
 img {
   width: 100%;
 }
@@ -14,9 +18,9 @@ body {
   display: grid;
   -ms-grid-columns: (1fr)[3];
       grid-template-columns: repeat(3, 1fr);
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
-      grid-template-areas: "home . ." ". carousel carousel" ". carousel carousel" ". . .";
+  -ms-grid-rows: (1fr)[3];
+      grid-template-rows: repeat(3, 1fr);
+      grid-template-areas: "home project-number project-number" "project-name carousel carousel" "project-name carousel carousel";
   background-color: #fee6da;
   text-transform: uppercase;
   font-weight: bold;
@@ -46,7 +50,46 @@ body #home-button:hover {
           animation: animated-text 0.3s linear 1 both;
 }
 
+body .project-number {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: project-number;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  align-self: flex-end;
+}
+
+body .project-number #project {
+  -ms-grid-column: 1;
+  grid-column: 1;
+}
+
+body .project-number #project-number {
+  -ms-grid-column: 2;
+  grid-column: 2;
+  justify-self: flex-end;
+}
+
+body .project-names {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: project-name;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  line-height: 1.5;
+  margin: auto;
+}
+
 body .carousel-container {
+  border: 2px solid black;
   -ms-grid-row: 2;
   -ms-grid-row-span: 2;
   -ms-grid-column: 2;
@@ -54,7 +97,6 @@ body .carousel-container {
   grid-area: carousel;
   width: 60vw;
   margin: auto;
-  border: 2px solid black;
   overflow: hidden;
 }
 
