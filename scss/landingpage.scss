@@ -38,7 +38,6 @@ a:hover {
 }
 
 body {
-
     background-color: $beigeorange;
     text-transform: uppercase;
     height: 100vh;
@@ -48,6 +47,7 @@ body {
     grid-template-areas: ". . . . ."
         ". logo logo logo ."
         "footer nav-magic nav-magic nav-magic .";
+
 
 
     #logo-container {
@@ -88,6 +88,10 @@ body {
             ". . press-me . . ";
 
 
+        a:hover {
+            text-decoration: line-through;
+        }
+
         #portfolio {
             grid-area: portfolio;
             @include center_self;
@@ -112,6 +116,8 @@ body {
             grid-area: contact;
             @include center_self;
         }
+
+
 
         #press-me {
             padding: 10px;
@@ -201,6 +207,16 @@ body {
 
     to {
         opacity: 0;
+    }
+}
+
+@keyframes linethrough {
+    from {
+        text-decoration: none;
+    }
+
+    to {
+        text-decoration: line-through;
     }
 }
 

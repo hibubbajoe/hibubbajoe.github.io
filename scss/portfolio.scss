@@ -1,0 +1,102 @@
+//this is for the about page: font-family: 'Inter', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
+
+$hardorange: #ff4d0a;
+$beigeorange:#f09a66;
+$pukegreen: #9b980f;
+$sweetblue: #48beec;
+$hardblue: #00205d;
+$superlightpink: #fee6da;
+
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: "inter", sans-serif;
+
+}
+
+img {
+    width: 100%;
+}
+
+body {
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas:
+        "home . ."
+        ". carousel carousel"
+        ". carousel carousel"
+        ". . .";
+
+
+    background-color: $superlightpink;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 40px;
+
+    #home-button {
+        grid-area: home;
+        animation: animated-text-reverse 0.2s linear 1.5s both;
+        margin: 30px 30px;
+        font-size: 30px;
+        width: 23px;
+        white-space: nowrap;
+        overflow: hidden;
+        color: black;
+
+        a {
+            &:visited {
+                color: black;
+            }
+        }
+
+        &:hover {
+            animation: animated-text 0.3s linear 1 both;
+        }
+    }
+
+
+    .carousel-container {
+
+        grid-area: carousel;
+        //display: flex;
+        width: 60vw;
+        margin: auto;
+        border: 2px solid black;
+        overflow: hidden;
+    }
+
+    .carousel-slide {
+        display: flex;
+    }
+
+    button {
+        display: none;
+    }
+
+
+}
+
+
+
+@keyframes animated-text {
+    from {
+        width: 23px;
+    }
+
+    to {
+        width: 120px;
+    }
+}
+
+@keyframes animated-text-reverse {
+    from {
+        width: 120px;
+    }
+
+    to {
+        width: 23px;
+    }
+}

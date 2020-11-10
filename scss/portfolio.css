@@ -1,0 +1,106 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: "inter", sans-serif;
+}
+
+img {
+  width: 100%;
+}
+
+body {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+      grid-template-areas: "home . ." ". carousel carousel" ". carousel carousel" ". . .";
+  background-color: #fee6da;
+  text-transform: uppercase;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+body #home-button {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: home;
+  -webkit-animation: animated-text-reverse 0.2s linear 1.5s both;
+          animation: animated-text-reverse 0.2s linear 1.5s both;
+  margin: 30px 30px;
+  font-size: 30px;
+  width: 23px;
+  white-space: nowrap;
+  overflow: hidden;
+  color: black;
+}
+
+body #home-button a:visited {
+  color: black;
+}
+
+body #home-button:hover {
+  -webkit-animation: animated-text 0.3s linear 1 both;
+          animation: animated-text 0.3s linear 1 both;
+}
+
+body .carousel-container {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 2;
+  grid-area: carousel;
+  width: 60vw;
+  margin: auto;
+  border: 2px solid black;
+  overflow: hidden;
+}
+
+body .carousel-slide {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+body button {
+  display: none;
+}
+
+@-webkit-keyframes animated-text {
+  from {
+    width: 23px;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+@keyframes animated-text {
+  from {
+    width: 23px;
+  }
+  to {
+    width: 120px;
+  }
+}
+
+@-webkit-keyframes animated-text-reverse {
+  from {
+    width: 120px;
+  }
+  to {
+    width: 23px;
+  }
+}
+
+@keyframes animated-text-reverse {
+  from {
+    width: 120px;
+  }
+  to {
+    width: 23px;
+  }
+}
+/*# sourceMappingURL=portfolio.css.map */

@@ -82,6 +82,10 @@ body #nav-list a:hover {
   color: black;
 }
 
+body #nav-list a:hover {
+  text-decoration: line-through;
+}
+
 body #nav-list #portfolio {
   -ms-grid-row: 1;
   -ms-grid-row-span: 2;
@@ -271,6 +275,24 @@ body .hidden {
   }
   to {
     opacity: 0;
+  }
+}
+
+@-webkit-keyframes linethrough {
+  from {
+    text-decoration: none;
+  }
+  to {
+    text-decoration: line-through;
+  }
+}
+
+@keyframes linethrough {
+  from {
+    text-decoration: none;
+  }
+  to {
+    text-decoration: line-through;
   }
 }
 
