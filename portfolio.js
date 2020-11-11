@@ -1,32 +1,79 @@
-const carouselSlide = document.querySelector(".carousel-slide");
-const carouselImages = document.querySelectorAll(".carousel-slide img")
-
-//buttons
-const prevBtn = document.getElementById("prevBtn")
-const nextBtn = document.getElementById("nextBtn")
-
-//counter
+//variables
+let carouselSlide = document.querySelector(".carousel-slide");
+let carouselImages = document.querySelectorAll(".carousel-slide img")
+let size = carouselImages[0].width;
 let counter = 1;
-const size = carouselImages[0].clientWidth;
+let projectNumber = document.getElementById("project-number");
 
-//starting on the first image
-carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
-
-//button listeners
-
-nextBtn.addEventListener('click', () => {
+function nextImage() {
     if (counter >= carouselImages.length - 1) return;
     carouselSlide.style.transition = "transform 0.4s ease-in-out";
     counter++;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
-})
-prevBtn.addEventListener('click', () => {
+    console.log("jag går framåt")
+}
+
+function prevImage() {
     if (counter <= 0) return;
     carouselSlide.style.transition = "transform 0.4s ease-in-out";
     counter--;
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
-})
+    console.log("jag går bakåt")
+}
 
+function updateSlide() {
+    //reseting counter to 1 after chaning img's
+    counter = 1;
+    //updating the amount of img's in slide
+    carouselImages = document.querySelectorAll(".carousel-slide img")
+
+    //starting on the first image
+    carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
+    console.log(carouselImages.length)
+}
+
+//event listeners   
+document.getElementById("acme-btn").addEventListener('click', () => {
+    carouselSlide.innerHTML =
+        `<img src="./jpg/acme4.png" id="lastClone" alt>
+        <img src="./jpg/acme1.png" alt>
+        <img src="./jpg/acme2.png" alt>
+        <img src="./jpg/acme3.png" alt>
+        <img src="./jpg/acme4.png" alt>
+        <img src="./jpg/acme1.png" id="firstClone" alt>`;
+    projectNumber.innerHTML = "01/03"
+    updateSlide();
+});
+document.getElementById("quiz-btn").addEventListener('click', () => {
+    carouselSlide.innerHTML =
+        `<img src="./jpg/quiz3.png" id="lastClone" alt>
+        <img src="./jpg/quiz1.png" alt>
+        <img src="./jpg/quiz2.png" alt>
+        <img src="./jpg/quiz3.png" alt>
+        <img src="./jpg/quiz1.png" id="firstClone" alt>`;
+    projectNumber.innerHTML = "02/03"
+    updateSlide();
+});
+document.getElementById("yatzy-btn").addEventListener('click', () => {
+    carouselSlide.innerHTML =
+        `<img src="./jpg/yatzy2.png" id="lastClone" alt>
+        <img src="./jpg/yatzy1.png" alt>
+        <img src="./jpg/yatzy2.png" alt>
+        <img src="./jpg/yatzy1.png" id="firstClone" alt>`;
+    projectNumber.innerHTML = "03/03"
+    updateSlide();
+});
+
+document.querySelectorAll(".nextBtn").forEach(item => {
+    item.addEventListener('click', () => {
+        nextImage();
+    })
+})
+document.querySelectorAll(".prevBtn").forEach(item => {
+    item.addEventListener('click', () => {
+        prevImage();
+    })
+})
 
 carouselSlide.addEventListener('transitionend', () => {
 
@@ -42,3 +89,5 @@ carouselSlide.addEventListener('transitionend', () => {
     }
 
 })
+
+updateSlide();

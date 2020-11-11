@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="scss/portfolio.css">
+    <script src="https://kit.fontawesome.com/bfd86aea7c.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -13,7 +14,9 @@
 
 
     <div class="carousel-container">
-        <div class="carousel-slide">
+        <i class="fas fa-arrow-left prevBtn" id="prevBtn"></i>
+        <i class="fas fa-arrow-right nextBtn" id="nextBtn"></i>
+        <div class="acme carousel-slide">
             <img src="./jpg/acme4.png" id="lastClone" alt="">
             <img src="./jpg/acme1.png" alt="">
             <img src="./jpg/acme2.png" alt="">
@@ -22,20 +25,20 @@
             <img src="./jpg/acme1.png" id="firstClone" alt="">
         </div>
     </div>
+
     <div class="project-number">
         <p id="project">Project</p>
         <p id="project-number">01/03</p>
     </div>
     <div class="project-names">
         <ul>
-            <li>Acme Events</li>
-            <li>API Quiz</li>
-            <li>Javascript Yatzy</li>
+            <li id="acme-btn">Acme Events</li>
+            <li id="quiz-btn">API Quiz</li>
+            <li id="yatzy-btn">Javascript Yatzy</li>
         </ul>
     </div>
 
-    <button id="prevBtn">Previous</button>
-    <button id="nextBtn">Next</button>
+
     <script src="portfolio.js"></script>
 </body>
 

@@ -64,7 +64,8 @@ body {
         display: grid;
         grid-template-columns: 1fr 1fr;
         align-self: flex-end;
-
+        font-size: 0.5em;
+        margin: 5px 110px;
 
         #project {
             grid-column: 1;
@@ -89,10 +90,34 @@ body {
 
         border: 2px solid black;
         grid-area: carousel;
-        //display: flex;
+        display: flex;
         width: 60vw;
         margin: auto;
         overflow: hidden;
+
+        #prevBtn {
+
+            position: absolute;
+            top: 55%;
+            z-index: 10;
+            left: 40%;
+            font-size: 30px;
+            color: grey;
+            opacity: 0.5;
+            cursor: pointer;
+        }
+
+        #nextBtn {
+
+            position: absolute;
+            top: 55%;
+            z-index: 10;
+            right: 7%;
+            font-size: 30px;
+            color: grey;
+            opacity: 0.5;
+            cursor: pointer;
+        }
     }
 
     .carousel-slide {
@@ -100,10 +125,9 @@ body {
 
     }
 
-    button {
+    .hidden {
         display: none;
     }
-
 
 }
 

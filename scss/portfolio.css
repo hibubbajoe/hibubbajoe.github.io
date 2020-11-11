@@ -60,6 +60,8 @@ body .project-number {
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
   align-self: flex-end;
+  font-size: 0.5em;
+  margin: 5px 110px;
 }
 
 body .project-number #project {
@@ -95,9 +97,34 @@ body .carousel-container {
   -ms-grid-column: 2;
   -ms-grid-column-span: 2;
   grid-area: carousel;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 60vw;
   margin: auto;
   overflow: hidden;
+}
+
+body .carousel-container #prevBtn {
+  position: absolute;
+  top: 55%;
+  z-index: 10;
+  left: 40%;
+  font-size: 30px;
+  color: grey;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+body .carousel-container #nextBtn {
+  position: absolute;
+  top: 55%;
+  z-index: 10;
+  right: 7%;
+  font-size: 30px;
+  color: grey;
+  opacity: 0.5;
+  cursor: pointer;
 }
 
 body .carousel-slide {
@@ -106,7 +133,7 @@ body .carousel-slide {
   display: flex;
 }
 
-body button {
+body .hidden {
   display: none;
 }
 
