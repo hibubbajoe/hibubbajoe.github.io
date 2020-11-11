@@ -11,6 +11,7 @@ body {
   background-color: #f09a66;
   text-transform: uppercase;
   height: 100vh;
+  font-size: 1rem;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[5];
@@ -39,22 +40,22 @@ body #logo-container {
 }
 
 body #logo-container #my-name {
-  font-size: 100px;
+  font-size: 6rem;
   margin: 10px;
 }
 
 body #logo-container p {
-  font-size: 20px;
+  font-size: 1rem;
 }
 
 body #logo-container #fullstack {
-  font-size: 40px;
+  font-size: 2.5rem;
   margin: 10px;
 }
 
 body #nav-list {
   list-style: none;
-  font-size: 30px;
+  font-size: 2rem;
   font-weight: bolder;
   -ms-grid-row: 3;
   -ms-grid-column: 2;
@@ -146,32 +147,8 @@ body #nav-list #contact {
       justify-self: center;
 }
 
-body #nav-list #press-me {
-  padding: 10px;
-  -ms-grid-row: 3;
-  -ms-grid-column: 3;
-  grid-area: press-me;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  margin-bottom: 30px;
-}
-
-body #nav-list #press-me button {
-  border: none;
-  background-color: transparent;
-  font-size: 20px;
-}
-
-body #nav-list #press-me:hover {
-  -webkit-animation: textPulse 1.5s infinite;
-          animation: textPulse 1.5s infinite;
-}
-
 body .footer {
-  font-size: 12px;
+  font-size: 0.8rem;
   margin: 7px;
   -ms-grid-row: 3;
   -ms-grid-column: 1;
@@ -234,7 +211,7 @@ body .hidden {
   outline: 0;
   padding: 10px;
   text-decoration: none;
-  font-size: 100px;
+  font-size: 6rem;
   font-weight: bolder;
   display: block;
   -webkit-transition: 0.5s;
@@ -296,9 +273,69 @@ body .hidden {
   }
 }
 
-@media screen and (max-height: 450px) {
-  .overlay a {
-    font-size: 20px;
+@media screen and (max-width: 600px) {
+  * {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    max-width: 600px;
+    height: 100vh;
+    margin: 0px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  body #logo-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    margin: 40px;
+  }
+  body #logo-container #my-name {
+    font-size: 4rem;
+  }
+  body #logo-container #fullstack {
+    font-size: 2rem;
+  }
+  body #nav-list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: 40px;
+    font-size: 1.5rem;
+  }
+  body .overlay {
+    font-size: 30px;
+  }
+  body .footer {
+    margin-top: 70px;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    font-size: 0.5rem;
+  }
+  body .overlay .overlay-content a {
+    font-size: 3.5rem;
   }
 }
 /*# sourceMappingURL=landingpage.css.map */

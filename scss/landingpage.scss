@@ -41,6 +41,7 @@ body {
     background-color: $beigeorange;
     text-transform: uppercase;
     height: 100vh;
+    font-size: 1rem;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 1fr);
@@ -58,16 +59,16 @@ body {
         justify-items: center;
 
         #my-name {
-            font-size: 100px;
+            font-size: 6rem;
             margin: 10px;
         }
 
         p {
-            font-size: 20px;
+            font-size: 1rem;
         }
 
         #fullstack {
-            font-size: 40px;
+            font-size: 2.5rem;
             margin: 10px;
         }
     }
@@ -76,7 +77,7 @@ body {
 
     #nav-list {
         list-style: none;
-        font-size: 30px;
+        font-size: 2rem;
         font-weight: bolder;
         grid-area: nav-magic;
         display: grid;
@@ -116,30 +117,11 @@ body {
             grid-area: contact;
             @include center_self;
         }
-
-
-
-        #press-me {
-            padding: 10px;
-            grid-area: press-me;
-            @include center_self;
-            margin-bottom: 30px;
-
-            button {
-                border: none;
-                background-color: transparent;
-                font-size: 20px;
-            }
-
-            &:hover {
-                animation: textPulse 1.5s infinite;
-            }
-        }
     }
 
 
     .footer {
-        font-size: 12px;
+        font-size: 0.8rem;
         margin: 7px;
         grid-area: footer;
         align-self: end;
@@ -173,17 +155,19 @@ body {
         @include link_colors(white, white, $pukegreen);
         text-shadow: black 0px 0px 3px;
 
+
         //links within the overlay
         a {
             outline: 0;
             padding: 10px;
             text-decoration: none;
-            font-size: 100px;
+            font-size: 6rem;
             font-weight: bolder;
             display: block;
             //makes the hover a little smoother
             transition: 0.5s;
             cursor: crosshair;
+
         }
     }
 }
@@ -220,9 +204,61 @@ body {
     }
 }
 
-// When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap 
-@media screen and (max-height: 450px) {
-    .overlay a {
-        font-size: 20px
+@media screen and (max-width: 600px) {
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    body {
+        max-width: 600px;
+        height: 100vh;
+        margin: 0px 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        #logo-container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            margin: 40px;
+
+            #my-name {
+                font-size: 4rem;
+            }
+
+            #fullstack {
+                font-size: 2rem
+            }
+        }
+
+        #nav-list {
+            display: flex;
+            flex-direction: column;
+            margin: 40px;
+            font-size: 1.5rem;
+        }
+
+        .overlay {
+            font-size: 30px;
+        }
+
+        .footer {
+            margin-top: 70px;
+            align-self: center;
+            font-size: 0.5rem;
+        }
+
+        .overlay {
+            .overlay-content {
+
+
+                a {
+                    font-size: 3.5rem;
+                }
+            }
+        }
     }
 }

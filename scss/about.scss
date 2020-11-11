@@ -1,21 +1,21 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@500;600&display=swap');
 
-
+//block of text 
 body {
-
     display: block;
     max-width: 80vw;
-    background-color: rgb(252, 251, 250);
+    background-color: rgb(250, 248, 245);
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 65px;
+    font-size: 4rem;
     font-family: "inter", sans-serif;
     line-height: 1;
 
+    //home button that retracts when not hovered
     #home-button {
         animation: animated-text-reverse 0.2s linear 1.5s both;
         margin: 30px 30px;
-        font-size: 0.5em;
+        font-size: 2rem;
         width: 23px;
         white-space: nowrap;
         overflow: hidden;
@@ -32,15 +32,15 @@ body {
         }
     }
 
-
+    //wrap for text
     .wrap {
-
         margin: 150px auto;
         width: 100%;
         padding: 0 2.5vh;
     }
 }
 
+//animation for the home button
 @keyframes animated-text {
     from {
         width: 23px;
@@ -62,11 +62,7 @@ body {
 }
 
 
-
-
-
-
-@media screen and (max-width: 992px) {
+/*@media screen and (max-width: 1100px) {
     body {
         background-color: rgb(252, 251, 250);
         max-width: 80vw;
@@ -77,27 +73,29 @@ body {
             justify-content: flex-start;
             font-size: 0.5em;
             margin: 27px 27px;
-            width: auto;
+            width: 100%;
+            animation: none;
         }
 
         .wrap {
             margin-top: 100px;
         }
     }
-}
+}*/
 
 @media screen and (max-width: 600px) {
     body {
         background-color: rgb(252, 251, 250);
         max-width: 80vw;
-        font-size: 25px;
+        font-size: 1.5rem;
 
         #home-button {
             display: flex;
             justify-content: flex-start;
-            font-size: 0.5em;
+            font-size: 0.5rem;
             margin: 25px 25px;
-            width: auto;
+            width: 100%;
+            animation: none;
         }
 
         .wrap {
