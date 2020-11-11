@@ -94,6 +94,7 @@ body {
         margin: auto;
         overflow: hidden;
 
+        //code for font-awesome buttons I couldn't get to work on GH pages
         #prevBtn {
 
             position: absolute;
@@ -117,6 +118,40 @@ body {
             opacity: 0.5;
             cursor: pointer;
         }
+    }
+
+    .nav-buttons {
+        //z-index: 10;
+        grid-area: carousel;
+
+        button {
+            display: flex;
+            flex-direction: column;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            color: gray;
+            opacity: 0.8;
+            width: 40px;
+            height: 40px;
+            font-size: 30px;
+        }
+
+        .prevBtn {
+            position: absolute;
+            top: 60%;
+            z-index: 10;
+            left: 40%;
+        }
+
+        .nextBtn {
+            position: absolute;
+            top: 60%;
+            z-index: 10;
+            right: 7%;
+        }
+
+
     }
 
     .carousel-slide {
