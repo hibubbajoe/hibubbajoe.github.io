@@ -33,33 +33,33 @@ function updateSlide() {
 }
 
 //event listeners   
-document.getElementById("acme-btn").addEventListener('click', () => {
+document.querySelector(".acme-btn").addEventListener('click', () => {
     carouselSlide.innerHTML =
-        `<img src="./jpg/acme4.png" id="lastClone" alt>
-        <img src="./jpg/acme1.png" alt>
-        <img src="./jpg/acme2.png" alt>
-        <img src="./jpg/acme3.png" alt>
-        <img src="./jpg/acme4.png" alt>
-        <img src="./jpg/acme1.png" id="firstClone" alt>`;
+        `<img src="jpg/acme4.png" id="lastClone" alt>
+        <img src="jpg/acme1.png" alt>
+        <img src="jpg/acme2.png" alt>
+        <img src="jpg/acme3.png" alt>
+        <img src="jpg/acme4.png" alt>
+        <img src="jpg/acme1.png" id="firstClone" alt>`;
     projectNumber.innerHTML = "01/03"
     updateSlide();
 });
-document.getElementById("quiz-btn").addEventListener('click', () => {
+document.querySelector(".quiz-btn").addEventListener('click', () => {
     carouselSlide.innerHTML =
-        `<img src="./jpg/quiz3.png" id="lastClone" alt>
-        <img src="./jpg/quiz1.png" alt>
-        <img src="./jpg/quiz2.png" alt>
-        <img src="./jpg/quiz3.png" alt>
-        <img src="./jpg/quiz1.png" id="firstClone" alt>`;
+        `<img src="jpg/quiz3.png" id="lastClone" alt>
+        <img src="jpg/quiz1.png" alt>
+        <img src="jpg/quiz2.png" alt>
+        <img src="jpg/quiz3.png" alt>
+        <img src="jpg/quiz1.png" id="firstClone" alt>`;
     projectNumber.innerHTML = "02/03"
     updateSlide();
 });
-document.getElementById("yatzy-btn").addEventListener('click', () => {
+document.querySelector(".yatzy-btn").addEventListener('click', () => {
     carouselSlide.innerHTML =
-        `<img src="./jpg/yatzy2.png" id="lastClone" alt>
-        <img src="./jpg/yatzy1.png" alt>
-        <img src="./jpg/yatzy2.png" alt>
-        <img src="./jpg/yatzy1.png" id="firstClone" alt>`;
+        `<img src="jpg/yatzy2.png" id="lastClone" alt>
+        <img src="jpg/yatzy1.png" alt>
+        <img src="jpg/yatzy2.png" alt>
+        <img src="jpg/yatzy1.png" id="firstClone" alt>`;
     projectNumber.innerHTML = "03/03"
     updateSlide();
 });
@@ -87,7 +87,6 @@ carouselSlide.addEventListener('transitionend', () => {
         counter = carouselImages.length - counter;
         carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
     }
-
 })
 
 updateSlide();
