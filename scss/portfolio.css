@@ -2,6 +2,7 @@
 * {
   padding: 0px;
   margin: 0px;
+  border: 0;
   font-family: "inter", sans-serif;
 }
 
@@ -156,7 +157,7 @@ body .nav-buttons .prevBtn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-left: 50px;
+  margin-left: 70px;
 }
 
 body .nav-buttons .prevBtn:hover {
@@ -170,7 +171,7 @@ body .nav-buttons .nextBtn {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-right: 50px;
+  margin-right: 70px;
   text-align: center;
 }
 
@@ -247,11 +248,14 @@ body .carousel-slide {
     -webkit-box-pack: start;
         -ms-flex-pack: start;
             justify-content: flex-start;
-    font-size: 0.5em;
+    font-size: 0.8rem;
     margin: 25px 25px;
     width: 100%;
     -webkit-animation: none;
             animation: none;
+  }
+  body button:hover {
+    background-color: transparent;
   }
   body .project-names {
     -webkit-box-align: center;
@@ -269,10 +273,10 @@ body .carousel-slide {
     display: none;
   }
   body .nav-buttons {
-    margin-top: -75px;
     text-align: center;
   }
   body .carousel-container {
+    margin-top: 15vh;
     width: 95vw;
   }
 }

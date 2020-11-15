@@ -10,6 +10,7 @@ $superlightpink: #fee6da;
 * {
     padding: 0px;
     margin: 0px;
+    border: 0;
     font-family: "inter", sans-serif;
 }
 
@@ -19,6 +20,7 @@ li {
 
 img {
     width: 100%;
+
 }
 
 body {
@@ -136,7 +138,7 @@ body {
             grid-template-columns: 1;
             justify-content: center;
             align-items: center;
-            margin-left: 50px;
+            margin-left: 70px;
 
             &:hover {
                 cursor: w-resize;
@@ -147,7 +149,7 @@ body {
             grid-template-columns: 2;
             justify-self: flex-end;
             align-items: center;
-            margin-right: 50px;
+            margin-right: 70px;
             text-align: center;
 
             &:hover {
@@ -203,30 +205,33 @@ body {
         #home-button {
             display: flex;
             justify-content: flex-start;
-            font-size: 0.5em;
+            font-size: 0.8rem;
             margin: 25px 25px;
             width: 100%;
             animation: none;
         }
 
+        button:hover {
+            background-color: transparent;
+        }
+
         .project-names {
             align-items: center;
-            //margin: 10px;
         }
 
         .project-number {
             display: flex;
             flex-direction: row;
-
             display: none;
         }
 
         .nav-buttons {
-            margin-top: -75px;
+            //margin-top: -50px;
             text-align: center;
         }
 
         .carousel-container {
+            margin-top: 15vh;
             width: 95vw;
         }
     }
