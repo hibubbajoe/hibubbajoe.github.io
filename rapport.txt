@@ -1,17 +1,76 @@
     SCRUM
 
+    Scrum är en modell som hjälper team att nå slutmål genom tydliga delmål, kommunikation och ständig förbättran påvägen dit. 
 
+    Uppdelat i tre har vi "Produktägare (PO)", "Scrum Master(SM)" och "Utvecklingsteam(DP)" som håller korrenspondens genom hela projektet. 
+    
+    Projektet skulle kunna se ut så här:
 
-
-
+        Product Backlog - PO, SM och DP gör en övergripande todo-lista på hela projektet.
+            Sprint Planning - Man bestämmer längd på sprint (3-30 dagar) och vad man hinner med under denna sprint.
+            Sprint Backlog - Kommande uppgifter under den aktuella sprinten.
+                Daily Scrum - Dagligt möte hos DP med avstämmning och planering av nästa dag. 
+                    Sprint Review - Genomgång av av sprintens resultat och vad som gick bra/inte bra och hur detta påvärkar nästa sprint. 
+                    Sprint Retrospective - Genomgång av sprintens arbetssätt och vad som gick bra/inte bra och hur man kan förbättra inför nästa sprint. 
 
 
     GRAFISK PROFIL
 
-
-
-
-
+    En grafisk profil är företagets ansikte utåt och varumärke i form av logotyper, färger, typsnitt, grafiska element osv.
+    En solid sammanställd profil gör det enklare för oss utvecklare att ge kunden/produktägaren det dom önskar.
+    Genom att vara konsekvent i design ger det hemsidan och resten av företaget en enhetlighet och igenkänningsfaktor som är viktigt
+    när man vill bygga ett starkt varumärk.
 
 
     TILLGÄNGLIGHET
+
+    Välkodade och väldesignade hemsidor gör det lättare för oss alla att ta del av internet, framförallt de människor med funktionshinder. 
+    Detta omfattar auditiva, kognitiva, neurologiska, fysiska, vokala och visuella hinder såväl som temporära hinder som bruten arm eller tappade glasögon, äldre människor och många fler. 
+
+    Dom grundläggande principerna är: 
+
+    1. Möjlig att uppfatta – Information och komponenter i ett användargränssnitt måste presenteras för användare på sätt som de kan uppfatta.
+    2. Hanterbar – Komponenter i ett användargränssnitt och navigering måste vara hanterbara.
+    3. Begriplig – Information och hantering av användargränssnitt måste vara begripligt.
+    4. Robust – Innehåll måste vara robust nog för att kunna tolkas på ett pålitligt sätt av ett brett spektrum av olika användarprogram, inklusive hjälpmedel.
+
+
+    Summa summarum är att internet är här för oss alla att ta del av och att vi som utvecklare måste göra så gott vi kan för att underlätta för dom som har det svårt. 
+
+    
+    
+    FÖR OCH NACKDELAR 
+    
+
+    SCRUM+
+    Underlättar i att dela upp ett större projekt i mindre tydligare bitar
+    Man försöker förbättra resultat och arbetsmiljö efter varje sprint
+    Man får en tydlig bild på individuella prestationer
+    
+    SCRUM-
+    Är svårt om folk inte är drivna och eller icke-sammarbetsvilliga
+    Det kan ta ett tag att komma igång om vissa aldrig använt sig av det tidigare
+    Kan vara svårt med större team
+    
+    --
+
+    GRAFISK PROFIL+
+    Inga frågetecken gällande design när man har något att förhålla sig till
+    Gör det enklare att leverera det kunden önskar
+    Ger produkten en enhetlighet
+    
+    GRAFISK PROFIL-
+    Kan bidra till mindre frihet hos utvecklarna (Bra och dåligt?)
+    Kan göra det svårt om den grafiska profilen inte är komplett/välskriven 
+    
+    --
+
+    TILLGÄNGLIGHET+
+    Gör att flera kan komma åt och använda sig av webben och våra hemsidor
+    En sida med bra tillgänglighet har ett bättre SEO
+    Bidrar till en mer användbar och lättnavigerad upplevelse
+    
+    TILLGÄNGLIGHET-
+    Kan bidra till mindre frihet i design
+    Kan ta längre tid att utveckla då sidan måste uppfylla vissa krav 
+    
