@@ -5,6 +5,7 @@ let size = carouselImages[0].width;
 let counter = 1;
 let projectNumber = document.getElementById("project-number");
 
+//goes back and forth in carousel 
 function nextImage() {
     if (counter >= carouselImages.length - 1) return;
     carouselSlide.style.transition = "transform 0.4s ease-in-out";
@@ -20,7 +21,6 @@ function prevImage() {
     carouselSlide.style.transform = 'translateX(' + (-size * counter) + "px)";
     console.log("jag går bakåt")
 }
-
 
 
 function updateSlide() {
@@ -40,7 +40,7 @@ function resetStyling() {
     })
 }
 
-//event listeners   
+//event listeners
 document.querySelector(".acme-btn").addEventListener('click', () => {
     resetStyling();
     carouselSlide.innerHTML =

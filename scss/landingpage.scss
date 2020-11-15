@@ -73,8 +73,7 @@ body {
         }
     }
 
-
-
+    //styling for the nav links 
     #nav-list {
         list-style: none;
         font-size: 2rem;
@@ -119,7 +118,6 @@ body {
         }
     }
 
-
     .footer {
         font-size: 0.8rem;
         margin: 7px;
@@ -132,6 +130,7 @@ body {
     }
 }
 
+//the overlay page
 .overlay {
     animation-name: fadeIn;
     animation-duration: 0.7s;
@@ -173,7 +172,7 @@ body {
 }
 
 
-
+//animation for the overlay
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -194,6 +193,7 @@ body {
     }
 }
 
+//animation for hover
 @keyframes linethrough {
     from {
         text-decoration: none;
@@ -204,6 +204,7 @@ body {
     }
 }
 
+//media query for iphone
 @media screen and (max-width: 600px) {
     * {
         margin: 0;
